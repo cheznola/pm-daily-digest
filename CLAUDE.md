@@ -1,7 +1,7 @@
 # PM Daily Digest — CLAUDE.md
 
 ## Ce projet
-Une Routine Claude Code qui lit mes newsletters Gmail chaque matin à 8h, score les contenus selon leur pertinence pour un PM senior en recherche d'emploi dans l'écosystème IA/Produit, et génère un digest HTML lisible directement dans l'interface Claude Code.
+Une Routine Claude Code qui lit mes newsletters Gmail chaque matin à 8h, score les contenus selon leur pertinence pour un PM senior en recherche d'emploi dans l'écosystème IA/Produit, et génère un digest lisible directement dans Claude Code.
 
 ## Objectif principal
 Me rendre plus sharp sur l'IA et le Produit pour que chaque conversation professionnelle soit meilleure. Réduire le bruit et le FOMO. À 8h30, j'ouvre Claude Code, le digest est là, je lis, je ferme.
@@ -63,55 +63,49 @@ Chaque email est scoré sur deux axes :
 
 **Objectif : 5 minutes de lecture max. Dense, actionnable, sans superflu.**
 
-Générer en HTML avec ce format exact :
+```
+[Date] — PM Daily Digest
 
-```html
-<h1>[Date] — PM Daily Digest</h1>
+🔴 Le signal fort
+[Titre en 1 ligne — factuel, pas accrocheur]
+[2-3 phrases. Une idée par phrase. Max 20 mots par phrase.
+Ton neutre et professionnel. Pas de familiarités.]
+Source : [newsletter]
 
-<h2>🔴 Le signal fort</h2>
-<p><strong>[Titre accrocheur en 1 ligne]</strong></p>
-<p>[2-3 phrases. Une idée par phrase. Pas de jargon.
-   Chaque phrase doit tenir seule.]</p>
-<p><em>Source : [newsletter]</em></p>
-<hr>
+📍 Ce qui se passe en ce moment
+[2-3 phrases. Contexte : d'où vient ce signal, pourquoi maintenant,
+ce que font les autres acteurs.]
 
-<h2>📍 Ce qui se passe en ce moment</h2>
-<p>[2-3 phrases de contexte. Pourquoi maintenant.
-   Ce que les autres font.]</p>
-<hr>
+⚡ Ce que tu peux faire en tant que PM
+→ En entretien : "[formulation prête à l'emploi, entre guillemets]"
+→ À tester : [1 action concrète cette semaine]
+→ Impact attendu : [résultat concret si appliqué]
 
-<h2>⚡ Ce que tu peux faire en tant que PM</h2>
-<ul>
-  <li><strong>En entretien :</strong> [formulation prête à l'emploi, entre guillemets]</li>
-  <li><strong>À tester :</strong> [1 action concrète cette semaine]</li>
-  <li><strong>Impact attendu :</strong> [résultat si tu appliques ça]</li>
-</ul>
-<hr>
+📌 À retenir cette semaine
+• [Newsletter] — [1 phrase d'essentiel, actionnable]
+• [Newsletter] — [1 phrase d'essentiel, actionnable]
+• [Newsletter] — [1 phrase d'essentiel, actionnable]
 
-<h2>📌 À retenir cette semaine</h2>
-<ul>
-  <li><strong>[Newsletter]</strong> — [1 phrase d'essentiel, actionnable]</li>
-</ul>
-<hr>
+🔇 Bruit écarté
+[1 phrase. Ce qui a circulé mais ne vaut pas l'attention.]
 
-<h2>🔇 Bruit écarté</h2>
-<p>[1 phrase. Ce qui a circulé mais ne vaut pas ton attention.]</p>
-
-<p><small>[X] emails traités — [date]</small></p>
+[X] emails traités — [date]
 ```
 
-**Règles de rédaction :**
+**Règles de rédaction strictes :**
 - Phrases courtes — maximum 20 mots par phrase
-- Pas de "il est important de noter que"
+- Ton neutre et professionnel — pas de familiarités, pas d'enthousiasme excessif
+- Pas de "il est important de noter que", "c'est massif", "à haut niveau"
 - Pas de bullet points dans le signal fort
-- Les formulations "En entretien" doivent être entre guillemets, prêtes à être dites telles quelles
+- Les formulations "En entretien" sont entre guillemets, prêtes à être dites telles quelles
+- Pas de HTML — Markdown uniquement
 
 ---
 
 ## Livraison
 
-- **Format** : HTML rendu directement dans la session Routine Claude Code
-- **Heure** : 8h00 via Routine planifiée
+- **Format** : Markdown — rendu directement dans la session Routine Claude Code
+- **Heure** : 8h00 via Routine planifiée (UTC+2)
 - **Consultation** : ouvrir Claude Code à 8h30, la session Routine est visible dans la sidebar
 - **Modèle** : Haiku 4.5
 
@@ -120,6 +114,7 @@ Générer en HTML avec ce format exact :
 ## Connecteurs requis
 
 - Gmail (natif Anthropic) — lecture des emails non lus + marquage comme lus
+- Permissions Gmail : outils d'écriture sur "Toujours autoriser"
 
 ---
 
@@ -132,10 +127,11 @@ David Pereira, Le Ticket, Jordan Chenevier, Timothee How They Grow,
 Ben Yoskovitz, Pawel Product Compass, Yann Leonardi, Milan Boisgard,
 Valentina Jemuovic, Olivier Productivist.
 
-Score chaque email (Axe 1 pertinence 0-3 + Axe 2 actionnabilité 0-2)
-selon les règles définies dans CLAUDE.md.
+Score chaque email selon le système défini dans CLAUDE.md
+(Axe 1 pertinence 0-3 + Axe 2 actionnabilité 0-2).
 
-Génère le digest en HTML selon le format exact défini dans CLAUDE.md.
+Génère le digest en Markdown selon le format et les règles
+de rédaction définis dans CLAUDE.md.
 
 Classe comme lus tous les emails traités dans Gmail.
 ```
@@ -149,14 +145,12 @@ pm-daily-digest/
 └── CLAUDE.md     ← ce fichier, lu par la Routine à chaque exécution
 ```
 
-Pas de script Python. Pas de cron local. La Routine tourne sur l'infrastructure Anthropic.
-
 ---
 
 ## Roadmap
 
 - [x] v0 : session interactive — test du scoring et du format
-- [ ] v1 : Routine planifiée à 8h → digest HTML dans Claude Code
+- [x] v1 : Routine planifiée à 8h → digest Markdown dans Claude Code
 - [ ] v2 : affiner le prompt selon les retours des premiers digests
 - [ ] v3 : digest hebdo avec liste de tâches à tester
 
@@ -166,7 +160,9 @@ Pas de script Python. Pas de cron local. La Routine tourne sur l'infrastructure 
 
 ### Session 1 — 19 avril 2026
 - Premier test en session interactive avec Sonnet 4.6
-- 8 emails traités, scoring fonctionnel
-- Format HTML validé
+- 8 emails traités, scoring fonctionnel, format HTML validé
+- Routine configurée : runs daily at 8:00 UTC+2
+- Repo GitHub : cheznola/pm-daily-digest
+- Permissions Gmail écriture : Toujours autoriser ✓
 - Consommation contexte session : ~53k / 200k tokens (27%)
-- Prochaine étape : créer la Routine + repo GitHub
+- Prochaine étape : valider marquage Gmail + affiner le ton
