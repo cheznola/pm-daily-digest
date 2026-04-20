@@ -28,6 +28,7 @@ Ce projet est un support d'apprentissage Claude Code : Routines, connecteur Gmai
 - Timothee / How They Grow
 - Ben Yoskovitz (Focus)
 - Pawel / The Product Compass
+- Silicon Carne
 
 **Tier 3 — Signal plus faible**
 - Yann Leonardi
@@ -134,7 +135,7 @@ Lis les emails non lus dans Gmail de ces expéditeurs :
 The Pragmatic Engineer, First Round Review, ByteByteGo, Aakash Gupta,
 David Pereira, Le Ticket, Jordan Chenevier, Timothee How They Grow,
 Ben Yoskovitz, Pawel Product Compass, Yann Leonardi, Milan Boisgard,
-Valentina Jemuovic, Olivier Productivist.
+Valentina Jemuovic, Olivier Productivist, Silicon Carne.
 
 Score chaque email selon le système défini dans CLAUDE.md
 (Axe 1 pertinence 0-3 + Axe 2 actionnabilité 0-2).
