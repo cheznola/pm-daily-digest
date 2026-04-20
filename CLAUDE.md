@@ -98,13 +98,12 @@ ce que font les autres acteurs.]
 - Pas de "il est important de noter que", "c'est massif", "à haut niveau"
 - Pas de bullet points dans le signal fort
 - Les formulations "En entretien" sont entre guillemets, prêtes à être dites telles quelles
-- Pas de HTML — Markdown uniquement
 
 ---
 
 ## Livraison
 
-- **Format** : Markdown — rendu directement dans la session Routine Claude Code
+- **Format** : Rendu directement dans la session Routine Claude Code
 - **Heure** : 8h00 via Routine planifiée (UTC+2)
 - **Consultation** : ouvrir Claude Code à 8h30, la session Routine est visible dans la sidebar
 - **Modèle** : Haiku 4.5
@@ -130,7 +129,7 @@ Valentina Jemuovic, Olivier Productivist.
 Score chaque email selon le système défini dans CLAUDE.md
 (Axe 1 pertinence 0-3 + Axe 2 actionnabilité 0-2).
 
-Génère le digest en Markdown selon le format et les règles
+Génère le digest selon le format et les règles
 de rédaction définis dans CLAUDE.md.
 
 Classe comme lus tous les emails traités dans Gmail.
@@ -160,7 +159,7 @@ pm-daily-digest/
 
 ### Session 1 — 19 avril 2026
 - Premier test en session interactive avec Sonnet 4.6
-- 8 emails traités, scoring fonctionnel, format HTML validé
+- 8 emails traités, scoring fonctionnel
 - Routine configurée : runs daily at 8:00 UTC+2
 - Repo GitHub : cheznola/pm-daily-digest
 - Permissions Gmail écriture : Toujours autoriser ✓
