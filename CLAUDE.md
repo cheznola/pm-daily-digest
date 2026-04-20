@@ -87,9 +87,9 @@ Impact attendu : [résultat concret si appliqué]
 
 A RETENIR CETTE SEMAINE
 
-- [Newsletter] : [1 phrase d'essentiel, actionnable]
-- [Newsletter] : [1 phrase d'essentiel, actionnable]
-- [Newsletter] : [1 phrase d'essentiel, actionnable]
+- [Newsletter] (reçu le [date]) : [1 phrase d'essentiel, actionnable]
+- [Newsletter] (reçu le [date]) : [1 phrase d'essentiel, actionnable]
+- [Newsletter] (reçu le [date]) : [1 phrase d'essentiel, actionnable]
 
 BRUIT ECARTE
 
@@ -105,6 +105,9 @@ BRUIT ECARTE
 - Pas de bullet points dans le signal fort
 - Les formulations "En entretien" sont entre guillemets, prêtes à être dites telles quelles
 - Aucun symbole Markdown : pas de #, **, *, ->, —
+- Indiquer la date de réception de chaque email cité. 
+  Format : (reçu le [date]) après le nom de la newsletter.
+  Ecarter silencieusement tout contenu reçu il y a plus de 7 jours.
 
 ---
 
