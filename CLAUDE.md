@@ -140,6 +140,9 @@ Valentina Jemuovic, Olivier Productivist, Silicon Carne.
 Score chaque email selon le système défini dans CLAUDE.md
 (Axe 1 pertinence 0-3 + Axe 2 actionnabilité 0-2).
 
+Génère le digest en français uniquement. Les termes propres au product management 
+restent en anglais (feature, roadmap, backlog, sprint, MVP, product market fit, etc.).
+
 Génère le digest en texte brut strict selon le format et les règles
 de rédaction définis dans CLAUDE.md. Aucun Markdown, aucune balise.
 
